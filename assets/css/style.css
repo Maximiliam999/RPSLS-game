@@ -4,10 +4,31 @@
     border-color: black;
     border-style: solid 2px;
     border-radius: 15px;
-
+    margin-left: 20%;
+    margin-right: 20%;
+    
 }
 
 #machine {
-    text-align: right;
+   
     margin-top: 10px;
+}
+
+.Btn-choice{
+    border: none;
+    padding: 15px;
+    background: none;
+    text-transform: uppercase;
+    width: 150px;
+    font-size: 20px;
+    
+}
+
+#score-board{
+    text-align: center;
+}
+
+#header{
+    text-align: center;
+    text-transform: uppercase;
 }
