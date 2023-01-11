@@ -1,32 +1,47 @@
-const playerText = document.getElementById("playerText");
-const machinceText= document.getElementsById("machineText");
-const resultText= document.getElementById("resultText");
-const scoreBoard= document.getElementById("score-board")
-const btnChoice= document.getElementsByClassName("Btn-choice");
+var rock = document.getElementById("rock");
+var paper = document.getElementById("scissor");
+var scissor = document.getElementById("scissor");
+var lizard = document.getElementById("lizard");
+var spock = document.getElementById("spock");
 let manScore= 0; 
 let machineScore= 0;
+let machine;
 
 function manChoice() {
-    
+   if (rock.clicked === true) {
+     let manChoice = "rock";
+   } else if (paper.clicked === true) {
+     let manChoice = "paper";
+   } else if (scissor.clicked === true) {
+     let manChoice = "scissor";
+   } else if (lizard.clicked === true) {
+     let manChoice = "lizard";
+   } else if (spock.clicked === true) {
+     let manChoice = "spock";
+   }
+   machineChoice();
 }
+
+
+
 
 
 function machineChoice() {
-let machine = Math.floor(Math.random() * 5) + 1;
+const randNum = Math.floor(Math.random() * 5) + 1;
 
-switch(choice){
-    case 0: machine="rock";
+switch(randNum){
+    case 1: machine="rock";
     break;
-    case 1: machine="paper";
+    case 2: machine="paper";
     break;
-    case 2: machine="scissors";
+    case 3: machine="scissors";
     break;
-    case 3: machine="lizard";
+    case 4: machine="lizard";
     break;
-    case 4: machine="spock";
+    case 5: machine="spock";
     break;
 }
-
+ checkResult();
 }
 
 function checkResult(){
@@ -36,10 +51,10 @@ if (manChoise === machinceChoise) {
 } else if (manChoise === "rock"){
     if (machinceChoise === "paper" || "spock"){
         return "You lose";
-        cpuScore++;
+        machineScore++;
     } else if (machinceChoise === "scissors" || "lizard"){
         return "You win";
-        userScore++;
+        manScore++;
     }
     } else if(manChoice === "paper"){
         if(machineChoice === "scissors"|| "lizard"){
@@ -53,10 +68,10 @@ if (manChoise === machinceChoise) {
     } else if(manChoice === "scissors"){
         if(machineChoice === "rock" || "spock"){
             return "You lose";
-            machineScore++ 
+            machineScore++;
         } else if(machineChoice === "paper" || "lizard"){
             return "You win";
-            manScore++
+            manScore++;
         }
     } else if(manChoice === "lizard"){
         if(machineChoice === "rock" || "scissor"){
@@ -64,16 +79,21 @@ if (manChoise === machinceChoise) {
             manScore++;
         } else if (machineChoice === "paper" || "spock"){
             return "You win";
-            manScore++
+            manScore++;
         }
     } else if(manChoice === "spock"){
         if(machineChoice === "paper" || "lizard"){
             return "You lose";
-            machineScore++
+            machineScore++;
         } else if (machineChoice === "rock" || "scissor"){
             return "You win";
-            manScore++
+            manScore++;
         }
     }
 
 }
+rock.addEventListener('click', myChoice);
+paper.addEventListener('click', myChoice);
+scissor.addEventListener('click', myChoice);
+lizard.addEventListener('click', myChoice);
+spock.addEventListener('click', myChoice);

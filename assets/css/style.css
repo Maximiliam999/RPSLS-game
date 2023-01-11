@@ -1,3 +1,8 @@
+body {
+    font-family: "sofia sans", sans-serif;
+    background-color: whitesmoke;
+}
+
 #frame {
     text-align: center;
     background-color: grey;
