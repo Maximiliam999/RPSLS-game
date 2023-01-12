@@ -40,10 +40,13 @@ function rockChoice(){
         document.getElementById("result").innerHTML = "You Win!";
         manScore++;
         console.log(manScore);
-    } else{
+    }  else if (userScore === 5) {
+        restartScores();
+    } else {
         document.getElementById("result").innerHTML = "You Lose!";
         machineScore++;
-    }
+    } 
+
     document.getElementById("machineScore").innerHTML = machineScore;
     document.getElementById("manScore").innerHTML = manScore;
 }
@@ -123,10 +126,11 @@ function spockChoice(){
     }
     document.getElementById("machineScore").innerHTML = machineScore;
     document.getElementById("manScore").innerHTML = manScore;
+    
 }
 
-function updateScore()
-   
+
+ 
 
 rock.addEventListener('click', rockChoice);
 paper.addEventListener('click', paperChoice);
