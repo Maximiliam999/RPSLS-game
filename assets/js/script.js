@@ -1,99 +1,128 @@
 var rock = document.getElementById("rock");
-var paper = document.getElementById("scissor");
+var paper = document.getElementById("paper");
 var scissor = document.getElementById("scissor");
 var lizard = document.getElementById("lizard");
 var spock = document.getElementById("spock");
-let manScore= 0; 
-let machineScore= 0;
-let machine;
-
-function manChoice() {
-   if (rock.clicked === true) {
-     let manChoice = "rock";
-   } else if (paper.clicked === true) {
-     let manChoice = "paper";
-   } else if (scissor.clicked === true) {
-     let manChoice = "scissor";
-   } else if (lizard.clicked === true) {
-     let manChoice = "lizard";
-   } else if (spock.clicked === true) {
-     let manChoice = "spock";
-   }
-   machineChoice();
-}
+var manScore= 0; 
+var machineScore= 0;
+var machineChoice;
+var manChoice;
 
 
 
+function randomNumber() {
+    var machine = Math.floor(Math.random() * 5);
 
+    switch(machine){
+        case 0: machineChoice = "Rock";
+        break;
+        case 1: machineChoice = "Paper";
+        break;
+        case 2: machineChoice = "Scissor";
+        break;
+        case 3: machineChoice = "Lizard";
+        break;
+        case 4: machineChoice = "Spock";
+        break;
+    }
 
-function machineChoice() {
-const randNum = Math.floor(Math.random() * 5) + 1;
-
-switch(randNum){
-    case 1: machine="rock";
-    break;
-    case 2: machine="paper";
-    break;
-    case 3: machine="scissors";
-    break;
-    case 4: machine="lizard";
-    break;
-    case 5: machine="spock";
-    break;
-}
- checkResult();
-}
-
-function checkResult(){
     
-if (manChoise === machinceChoise) {
-    return "It\"s a tie, the CPU also chose" + machinceChoise + ".";
-} else if (manChoise === "rock"){
-    if (machinceChoise === "paper" || "spock"){
-        return "You lose";
-        machineScore++;
-    } else if (machinceChoise === "scissors" || "lizard"){
-        return "You win";
+}
+
+function rockChoice() {
+    randomNumber();
+    manChoice = "Rock"
+    document.getElementById("manresult").innerHTML = manChoice;
+    document.getElementById("machineresult").innerHTML = machineChoice;
+    if(manChoice === machineChoice) {
+        document.getElementById("result").innerHTML = "It's a Tie!";
+    } else if (machineChoice == "scissor" || machineChoice == "lizard") {
+        document.getElementById("result").innerHTML = "You Win!";
         manScore++;
+        console.log(manScore);
+    } else {
+        document.getElementById("result").innerHTML= "You Lose!";
+        machineScore++;
     }
-    } else if(manChoice === "paper"){
-        if(machineChoice === "scissors"|| "lizard"){
-            return "You lose";
-            machineScore++;
-        } else if(machineChoice === "rock" || "spock"){
-            return "You win";
-            manScore++;
-        } 
-        
-    } else if(manChoice === "scissors"){
-        if(machineChoice === "rock" || "spock"){
-            return "You lose";
-            machineScore++;
-        } else if(machineChoice === "paper" || "lizard"){
-            return "You win";
-            manScore++;
-        }
-    } else if(manChoice === "lizard"){
-        if(machineChoice === "rock" || "scissor"){
-            return "You lose";
-            manScore++;
-        } else if (machineChoice === "paper" || "spock"){
-            return "You win";
-            manScore++;
-        }
-    } else if(manChoice === "spock"){
-        if(machineChoice === "paper" || "lizard"){
-            return "You lose";
-            machineScore++;
-        } else if (machineChoice === "rock" || "scissor"){
-            return "You win";
-            manScore++;
-        }
+    document.getElementById("machineScore")
+    document.getElementById("manScore")
+}
+
+function paperChoice(){
+    randomNumber();
+    manChoice = "paper";
+    document.getElementById("manresult").innerHTML = manChoice;
+    document.getElementById("machineresult").innerHTML = machineChoice;
+    if(manChoice === machineChoice){
+        document.getElementById("result").innerHTML = "It's a Tie!";
+    } else if (machineChoice === "Rock" || machineChoice == "Spock"){
+        document.getElementById("result").innerHTML = "You Win!";
+        manScore++;
+    } else{
+        document.getElementById("result").innerHTML = "You Lose!";
+        machineScore++;
     }
+    document.getElementById("machinescore").innerHTML = machineScore;
+    document.getElementById("manscore").innerHTML = manScore;
+}
+
+function scissorChoice(){
+    randomNumber();
+    manChoice = "scissor";
+    document.getElementById("manresult").innerHTML = manChoice;
+    document.getElementById("machineresult").innerHTML = machineChoice;
+    if (manChoice  === machineChoice) {
+        document.getElementById("result").innerHTML = "It's a Tie!"
+    } else if (machineChoice === "paper" || machineChoice === "lizard") {
+        document.getElementById("result").innerHTML = "You Win!";
+        manScore++;
+    } else {
+        document.getElementById("result").innerHTML = "You Lose!";
+        machineScore++;
+    }
+    document.getElementById("machineScore").innerHTML = machineScore;
+    document.getElementById("manScore").innerHTML = manScore;
+}
+
+function lizardChoice(){
+    randomNumber();
+    manChoice = "lizard";
+    document.getElementById("manresult").innerHTML = manChoice;
+    document.getElementById("machineresult").innerHTML = machineChoice;
+    if (manChoice === machineChoice) {
+        document.getElementById("result").innerHTML = "It's a Tie!";
+    } else if (machineChoice === "spock" || machineChoice == "paper") {
+        document.getElementById("result").innerHTML = "You Win!";
+        manScore++;
+    } else {
+        document.getElementById("result").innerHTML = "You Lose!";
+        machineScore++;
+    }
+    document.getElementById("machineScore").innerHTML = machineScore;
+    document.getElementById("manScore").innerHTML = manScore;
 
 }
-rock.addEventListener('click', myChoice);
-paper.addEventListener('click', myChoice);
-scissor.addEventListener('click', myChoice);
-lizard.addEventListener('click', myChoice);
-spock.addEventListener('click', myChoice);
+
+function spockChoice(){
+    randomNumber();
+    manChoice = "spock";
+    document.getElementById("manresult").innerHTML = manChoice;
+    document.getElementById("machineresult").innerHTML = machineChoice;
+    if (manChoice === machineChoice){
+        document.getElementById("result").innerHTML = "It's a Tie!";
+    } else if (machineChoice === "scissor" || machineChoice === "rock") {
+        document.getElementById("result").innerHTML = "You Win!";
+        manScore++;
+    } else {
+        document.getElementById("result").innerHTML = "You Lose!";
+        machineScore++;
+    }
+    document.getElementById("machineScore").innerHTML = machineScore;
+    document.getElementById("manScore").innerHTML = manScore;
+}
+
+rock.addEventListener('click', rockChoice);
+paper.addEventListener('click', paperChoice);
+scissor.addEventListener('click', scissorChoice);
+lizard.addEventListener('click', lizardChoice);
+spock.addEventListener('click', spockChoice);
