@@ -11,7 +11,7 @@ var manChoice;
 
 
 function randomNumber() {
-    var machine = Math.floor(Math.random() * 5);
+    var machine = Math.floor(Math.random() * 5) + 1;
 
     switch(machine){
         case 0: machineChoice = "Rock";
@@ -29,28 +29,29 @@ function randomNumber() {
     
 }
 
-function rockChoice() {
+function rockChoice(){
     randomNumber();
-    manChoice = "Rock"
+    manChoice = "Rock";
     document.getElementById("manresult").innerHTML = manChoice;
     document.getElementById("machineresult").innerHTML = machineChoice;
-    if(manChoice === machineChoice) {
+    if(manChoice === machineChoice){
         document.getElementById("result").innerHTML = "It's a Tie!";
-    } else if (machineChoice == "scissor" || machineChoice == "lizard") {
+    } else if (machineChoice == "Scissor" || machineChoice == "Lizard"){
         document.getElementById("result").innerHTML = "You Win!";
         manScore++;
         console.log(manScore);
-    } else {
-        document.getElementById("result").innerHTML= "You Lose!";
+    } else{
+        document.getElementById("result").innerHTML = "You Lose!";
         machineScore++;
     }
-    document.getElementById("machineScore")
-    document.getElementById("manScore")
+    document.getElementById("machineScore").innerHTML = machineScore;
+    document.getElementById("manScore").innerHTML = manScore;
 }
+
 
 function paperChoice(){
     randomNumber();
-    manChoice = "paper";
+    manChoice = "Paper";
     document.getElementById("manresult").innerHTML = manChoice;
     document.getElementById("machineresult").innerHTML = machineChoice;
     if(manChoice === machineChoice){
@@ -62,18 +63,20 @@ function paperChoice(){
         document.getElementById("result").innerHTML = "You Lose!";
         machineScore++;
     }
-    document.getElementById("machinescore").innerHTML = machineScore;
-    document.getElementById("manscore").innerHTML = manScore;
+    document.getElementById("machineScore").innerHTML = machineScore;
+    document.getElementById("manScore").innerHTML = manScore;
 }
+
 
 function scissorChoice(){
     randomNumber();
-    manChoice = "scissor";
+    manChoice = "Scissor";
     document.getElementById("manresult").innerHTML = manChoice;
     document.getElementById("machineresult").innerHTML = machineChoice;
-    if (manChoice  === machineChoice) {
-        document.getElementById("result").innerHTML = "It's a Tie!"
-    } else if (machineChoice === "paper" || machineChoice === "lizard") {
+    if(manChoice === machineChoice){
+        document.getElementById("result").innerHTML = "It's a Tie!";
+
+    } else if (machineChoice === "paper" || machineChoice == "lizard"){
         document.getElementById("result").innerHTML = "You Win!";
         manScore++;
     } else {
@@ -84,14 +87,15 @@ function scissorChoice(){
     document.getElementById("manScore").innerHTML = manScore;
 }
 
+
 function lizardChoice(){
     randomNumber();
-    manChoice = "lizard";
+    manChoice = "Lizard";
     document.getElementById("manresult").innerHTML = manChoice;
     document.getElementById("machineresult").innerHTML = machineChoice;
     if (manChoice === machineChoice) {
         document.getElementById("result").innerHTML = "It's a Tie!";
-    } else if (machineChoice === "spock" || machineChoice == "paper") {
+    } else if (machineChoice === "Spock" || machineChoice == "Paper") {
         document.getElementById("result").innerHTML = "You Win!";
         manScore++;
     } else {
@@ -105,12 +109,12 @@ function lizardChoice(){
 
 function spockChoice(){
     randomNumber();
-    manChoice = "spock";
+    manChoice = "Spock";
     document.getElementById("manresult").innerHTML = manChoice;
     document.getElementById("machineresult").innerHTML = machineChoice;
     if (manChoice === machineChoice){
         document.getElementById("result").innerHTML = "It's a Tie!";
-    } else if (machineChoice === "scissor" || machineChoice === "rock") {
+    } else if (machineChoice === "Scissor" || machineChoice === "Rock") {
         document.getElementById("result").innerHTML = "You Win!";
         manScore++;
     } else {
@@ -120,6 +124,9 @@ function spockChoice(){
     document.getElementById("machineScore").innerHTML = machineScore;
     document.getElementById("manScore").innerHTML = manScore;
 }
+
+function updateScore()
+   
 
 rock.addEventListener('click', rockChoice);
 paper.addEventListener('click', paperChoice);
