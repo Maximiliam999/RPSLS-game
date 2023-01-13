@@ -7,13 +7,18 @@ but with more of a challenge with the two new moves, lizard and spock.
 ## Features
 - Heading 
     - At the top of the page for the user to see title of the game. 
+![screenshot of title at the top of the screen](/assets/images/titleofgame.png "game title")
+
 - The game text area 
     - Shows the user their choice and also the machine's choice.
+![Screenshot of the user and the machine's choices](/assets/images/gamechoicetext.png "man and machine choices")
+- Result 
+    - The area displays whether the user or the machine won the round.
+![Screenshot of the result of each round](/assets/images/gameresult.png "result of each round")
 - The game buttons area 
     - This area is what allows the user to play the game.
     - There is one button for each move. Pressing one will lock it in as your option and start the game 
-- Result 
-    - The area displays whether the user or the machine won the round.
+![Screenshot of the five buttons or moves the user can make](/assets/images/btnchoices.png "all moves available to the user")
 - Scoreboard
     - For the user to keep track on the score in the game. 
 - Instructions 
