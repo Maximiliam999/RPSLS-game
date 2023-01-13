@@ -5,6 +5,7 @@ rock, paper, scissor,lizard and spock. The site targets people who love games es
 but with more of a challenge with the two new moves, lizard and spock.
 
 ## Features
+
 - Heading 
     - At the top of the page for the user to see title of the game. 
 ![screenshot of title at the top of the screen](/assets/images/titleofgame.png "game title")
@@ -12,26 +13,35 @@ but with more of a challenge with the two new moves, lizard and spock.
 - The game text area 
     - Shows the user their choice and also the machine's choice.
 ![Screenshot of the user and the machine's choices](/assets/images/gamechoicetext.png "man and machine choices")
+
+
 - Result 
     - The area displays whether the user or the machine won the round.
 ![Screenshot of the result of each round](/assets/images/gameresult.png "result of each round")
 - The game buttons area 
+
     - This area is what allows the user to play the game.
     - There is one button for each move. Pressing one will lock it in as your option and start the game 
 ![Screenshot of the five buttons or moves the user can make](/assets/images/btnchoices.png "all moves available to the user")
+
+
 - Scoreboard
     - For the user to keep track on the score in the game. 
+![Screenshot of scoreboard](/assets/images/scoreboard.png "score of the user and the machine")
+
 - Instructions 
     - Contains three sections.
     - "What is man vs the machine" short explanation on what the site is.
     - "How to play" short explanation on how the user can start the game.
     - "Rules" an explanation to help the user on what move wins over what move.
+![Screenshot of the instructions](/assets/images/instructions.png "Instructions for users")
 
 ## Running Tests
 - User and machine choice
 - Game Buttons
 - Round result
 - Scoreboard
+
 
 ## Validator Testing 
 
