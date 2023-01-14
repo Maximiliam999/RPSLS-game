@@ -66,3 +66,18 @@ text-transform: uppercase;
     font-size: 17px;
 }
 
+
+@media (max-width: 820px) {
+    #frame{
+        margin-left: -25px;
+        margin-right: -25px;
+    }
+}
+
+
+@media (max-width: 630px) {
+#frame {
+    margin-left: -20px;
+    margin-right: -20px;
+} 
+}
