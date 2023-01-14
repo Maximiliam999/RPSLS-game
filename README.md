@@ -63,6 +63,10 @@ but with more of a challenge with the two new moves, lizard and spock.
 - Scoreboard
     - The scoreboard have been tested and works on diffrent devices, on both Microsoft Edge and Google Chrome.
     - It has been tested and works on tablet and phone screens. 
+
+## Lighthouse testing
+![Screenshot of lighthouse test](/assets/images/lighthousetest.png "Result of lighthouse testing")
+
 ## Validator Testing 
 
 - HTML 
@@ -78,3 +82,19 @@ but with more of a challenge with the two new moves, lizard and spock.
         - There are 6 functions in this file.
         - Largest function has 13 statments in it, while the median is 12.
         - The most complex function has a cyclomatic complexity value of 6 while the median is 4.
+
+## Deployment
+
+- This site was deployed to GitHub pages by following these steps.
+    - Go to GitHub repository and then click the settings tab.
+    - Then click pages and go to branch and select main. 
+    - Wait for a bit and a link to your  website will be provided at the top of the page.
+The link can be found here: 
+## Credits
+
+- Content 
+    - The code for restarting the game is taken from https://developer.mozilla.org/en-US/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win
+
+- Media 
+    - The icons were taken from https://fontawesome.com/icons
+    - And the font was taken from https://fonts.google.com/
