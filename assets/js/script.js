@@ -49,8 +49,7 @@ function rockChoice() {
       machineScore++;
    }
 
-   document.getElementById("machineScore").innerHTML = machineScore;
-   document.getElementById("manScore").innerHTML = manScore;
+   updateScore();
 }
 
 
@@ -68,8 +67,7 @@ function paperChoice() {
       document.getElementById("result").innerHTML = "You Lose!";
       machineScore++;
    }
-   document.getElementById("machineScore").innerHTML = machineScore;
-   document.getElementById("manScore").innerHTML = manScore;
+   updateScore();
 }
 
 
@@ -88,8 +86,7 @@ function scissorChoice() {
       document.getElementById("result").innerHTML = "You Lose!";
       machineScore++;
    }
-   document.getElementById("machineScore").innerHTML = machineScore;
-   document.getElementById("manScore").innerHTML = manScore;
+   updateScore();
 }
 
 
@@ -107,9 +104,7 @@ function lizardChoice() {
       document.getElementById("result").innerHTML = "You Lose!";
       machineScore++;
    }
-   document.getElementById("machineScore").innerHTML = machineScore;
-   document.getElementById("manScore").innerHTML = manScore;
-
+  updateScore();
 }
 
 function spockChoice() {
@@ -126,10 +121,23 @@ function spockChoice() {
       document.getElementById("result").innerHTML = "You Lose!";
       machineScore++;
    }
-   document.getElementById("machineScore").innerHTML = machineScore;
-   document.getElementById("manScore").innerHTML = manScore;
+  updateScore();
 
 }
+
+function updateScore() {
+   document.getElementById("machineScore").innerHTML = machineScore;
+   document.getElementById("manScore").innerHTML = manScore;
+   if(manScore===5) {
+      console.log("human wins")
+   } else if(machineScore===5){
+      console.log("machine win")
+   } else {
+
+   }
+   
+}
+
 
 
 rock.addEventListener('click', rockChoice);
