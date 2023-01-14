@@ -89,7 +89,7 @@ but with more of a challenge with the two new moves, lizard and spock.
     - Go to GitHub repository and then click the settings tab.
     - Then click pages and go to branch and select main. 
     - Wait for a bit and a link to your  website will be provided at the top of the page.
-The link can be found here: 
+The link can be found here: https://maximiliam999.github.io/RPSLS-game/
 ## Credits
 
 - Content 
