@@ -53,22 +53,28 @@ but with more of a challenge with the two new moves, lizard and spock.
 ![Screenshot of choices on tablet/phone](/assets/images/gamechoicetextphonetablet.png "choices as seen on tablet or phone")
 
 - Game Buttons
-    - Buttons have been tested on diffrent devices, on both Microsoft Edge and Google Chrome
+    - Buttons have been tested and works on diffrent devices, on both Microsoft Edge and Google Chrome.
     - On phone screens the buttons will instead stack on top of eachother and the frame will cover the white space next to it by removing margins using media queries.
-    - On tablet the frame will remove the white space on each side by removing margins using media queries 
+    - On tablet the frame will remove the white space on each side by removing margins using media queries.
 - Round result
+    - To make sure the right result text shows up for example "you win!" if you win the game has been tested and it will show the correct text for every move.
+    - It has been tested on both Google Chrome and Microsoft Edge and works on both.
+    - It is in the same frame as game buttons and the user and machine choices and will take the same media queries that have been tested. 
 - Scoreboard
-
-
+    - The scoreboard have been tested and works on diffrent devices, on both Microsoft Edge and Google Chrome.
+    - It has been tested and works on tablet and phone screens. 
 ## Validator Testing 
 
 - HTML 
-    - No errors were found when passing through the official W3C Validator
+    - No errors were found when passing through the official W3C Validator. https://validator.w3.org/
+
 - CSS
-    - One error found, using border-style with a value of "solid 2px" changed from border-style to just border. 
+    - One error found when passing through the official W3C Validator , using border-style with a value of "solid 2px" changed from border-style to just border. 
+    https://jigsaw.w3.org/css-validator/
+
 - JavaScript
-    - No errors were found when passing through the official Jshint Validator
-        - The following metrics were returned
+    - No errors were found when passing through the official Jshint Validator. https://jshint.com/
+        - The following metrics were returned.
         - There are 6 functions in this file.
-        - Largest function has 13 statments in it, while the median is 12
+        - Largest function has 13 statments in it, while the median is 12.
         - The most complex function has a cyclomatic complexity value of 6 while the median is 4.
