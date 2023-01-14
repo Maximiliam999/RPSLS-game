@@ -43,7 +43,7 @@ function rockChoice() {
    } else if (machineChoice == "Scissor" || machineChoice == "Lizard") {
       document.getElementById("result").innerHTML = "You Win!";
       manScore++;
-      console.log(manScore);
+      
    } else {
       document.getElementById("result").innerHTML = "You Lose!";
       machineScore++;
@@ -129,13 +129,15 @@ function updateScore() {
    document.getElementById("machineScore").innerHTML = machineScore;
    document.getElementById("manScore").innerHTML = manScore;
    if(manScore===5) {
-      console.log("human wins")
-   } else if(machineScore===5){
-      console.log("machine win")
-   } else {
-
-   }
-   
+      alert("You Win!")
+      document.location.reload();
+      clearInterval(interval);
+   }  
+   else if(machineScore===5){
+      alert("You Lose!")
+      document.location.reload();
+      clearInterval(interval);
+   } 
 }
 
 
