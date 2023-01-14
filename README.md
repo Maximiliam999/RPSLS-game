@@ -4,6 +4,8 @@ Man vs Machine is a website where you can challenge your machine in a responsive
 rock, paper, scissor,lizard and spock. The site targets people who love games especially rock, paper scissor 
 but with more of a challenge with the two new moves, lizard and spock.
 
+![Screenshot of am i responsive](/assets/images/amiresponsive.png "check responsiveness on diffrent screen sizes")
+
 ## Features
 
 - Heading 
@@ -52,7 +54,8 @@ but with more of a challenge with the two new moves, lizard and spock.
 
 - Game Buttons
     - Buttons have been tested on diffrent devices, on both Microsoft Edge and Google Chrome
-    - On tablet and phone screens the buttons will instead stack on top of eachother.
+    - On phone screens the buttons will instead stack on top of eachother and the frame will cover the white space next to it by removing margins using media queries.
+    - On tablet the frame will remove the white space on each side by removing margins using media queries 
 - Round result
 - Scoreboard
 
