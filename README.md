@@ -45,6 +45,9 @@ but with more of a challenge with the two new moves, lizard and spock.
 
 ![Screenshot of the instructions](/assets/images/instructions.png "Instructions for users")
 
+## Features left to implement
+- Change code so that there is one function which gets inputs instead of one for each choice.
+
 ## Running Tests
 - User and machine choice
     - The preview of both the user and machine choices works on both Google Chrome and Microsoft Edge 
@@ -93,7 +96,7 @@ The link can be found here: https://maximiliam999.github.io/RPSLS-game/
 ## Credits
 
 - Content 
-    - The code for restarting the game is taken from https://developer.mozilla.org/en-US/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win
+    - The code for restarting the game on line 133,134,138 and 139 in javascript is taken from https://developer.mozilla.org/en-US/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win
 
 - Media 
     - The icons were taken from https://fontawesome.com/icons
